@@ -1,1 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Absensi Online</title>
+</head>
+<body>
+  <h2>Form Absensi</h2>
+  <form method="POST" action="/absen">
+    Nama: <input type="text" name="nama" required>
+    <button type="submit">Absen</button>
+  </form>
 
+  <h3>Daftar Absensi</h3>
+  <ul>
+    {% for a in absensi %}
+      <li>{{ a.nama }} - {{ a.waktu }}</li>
+    {% endfor %}
+  </ul>
+</body>
+</html>
